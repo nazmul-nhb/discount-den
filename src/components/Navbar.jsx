@@ -5,14 +5,14 @@ import { FaHome } from "react-icons/fa";
 import { GiCompass } from "react-icons/gi";
 
 const Navbar = () => {
-	const [openNavbar, setOpenNavbar] = useState(false);
-    const sidebarRef = useRef(null);
-    
+	const [openSidebar, setOpenSidebar] = useState(false);
+	const sidebarRef = useRef(null);
+
 	// sidebar clicking in small devices
 	useEffect(() => {
 		const handleClickOutside = (e) => {
 			if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
-				setOpenNavbar(false);
+				setOpenSidebar(false);
 			}
 		};
 
@@ -33,7 +33,7 @@ const Navbar = () => {
 	const navigationItems = (
 		<>
 			<NavLink
-				onClick={() => setOpenNavbar(false)}
+				onClick={() => setOpenSidebar(false)}
 				className={navClasses}
 				to={"/"}
 			>
@@ -41,7 +41,7 @@ const Navbar = () => {
 				Home
 			</NavLink>
 			<NavLink
-				onClick={() => setOpenNavbar(false)}
+				onClick={() => setOpenSidebar(false)}
 				className={navClasses}
 				to={"/contact"}
 			>
@@ -52,8 +52,7 @@ const Navbar = () => {
 	);
 
 	return (
-		<nav className="w-full bg-blue-900/80 text-white flex items-center justify-between gap-0 md:gap-4 mx-auto px-2 sm:px-6 py-3 md:px-12 fixed top-0 left-0 right-0 h-16 z-50">
-			<div className="absolute inset-0 backdrop-filter backdrop-blur-lg -z-10"></div>
+		<nav className="w-full bg-blue-900/80 text-white flex items-center justify-between gap-0 md:gap-4 mx-auto px-2 sm:px-6 py-3 md:px-12 h-16 fixed top-0 z-40 backdrop-blur-sm backdrop-filter">
 			<div className="flex items-center justify-start gap-2">
 				<figure className="cursor-pointer inset-0">
 					<img
@@ -64,7 +63,7 @@ const Navbar = () => {
 					/>
 				</figure>
 				<NavLink
-					className="text-2xl sm:text-3xl font-semibold text-blue-50 hover:text-blue-300 transition-all duration-500"
+					className="text-xl sm:text-2xl font-semibold text-blue-50 hover:text-blue-300 transition-all duration-500"
 					to={"/"}
 				>
 					Minas Morgul
@@ -77,18 +76,17 @@ const Navbar = () => {
 				<GiCompass
 					title="Navigate"
 					className={`sm:hidden text-4xl hover:text-blue-300 cursor-pointer z-50 transition-all duration-1000 ${
-						openNavbar && "rotate-[225deg] text-blue-400"
+						openSidebar && "rotate-[225deg] text-blue-400"
 					}`}
-					onClick={() => setOpenNavbar(!openNavbar)}
+					onClick={() => setOpenSidebar(!openSidebar)}
 				/>
 				<ul
-					className={`w-3/5 sm:w-full flex flex-col sm:flex-row justify-start sm:justify-center gap-2 sm:gap-5 text-base sm:text-lg font-semibold transition-all duration-700 absolute sm:static sm:shadow-none h-auto pl-6 p-4 sm:p-0 ${
-						openNavbar
-							? "right-0 top-16 bg-blue-900/80 flex z-10"
+					className={`w-3/5 sm:w-full flex flex-col sm:flex-row justify-start sm:justify-center gap-2 sm:gap-5 text-base sm:text-lg font-semibold transition-all duration-700 absolute sm:static sm:shadow-none pl-6 p-4 sm:p-0 ${
+						openSidebar
+							? "right-0 top-16 bg-blue-900/80 z-50 backdrop-blur-sm backdrop-filter"
 							: "-right-full top-16 shadow-none"
 					}`}
 				>
-					<div className="absolute inset-0 backdrop-filter backdrop-blur-lg -z-10"></div>
 					{navigationItems}
 				</ul>
 			</div>
