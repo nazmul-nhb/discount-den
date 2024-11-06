@@ -46,7 +46,7 @@ const Navbar = () => {
 				to={"/contact"}
 			>
 				<MdContactMail className="sm:hidden" />
-				Contact Me
+				Contact Us
 			</NavLink>
 		</>
 	);

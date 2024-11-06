@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'bg-primary': '#fff',
+        'bg-secondary': '#000',
+        'morgul-primary': '#fff',
+        'morgul-secondary': '#000',
+      }
+    },
   },
   plugins: [],
 };
