@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        'bg-primary': '#fff',
-        'bg-secondary': '#000',
-        'morgul-primary': '#fff',
-        'morgul-secondary': '#000',
+        'bg-primary': '#124e65',
+        'bg-secondary': '#1f89b1',
+        'morgul-primary': '#002631',
+        'morgul-secondary': '#d4d9d5',
       }
     },
   },

@@ -27,7 +27,7 @@ const Navbar = () => {
 	const navClasses = ({ isActive }) =>
 		isActive
 			? "font-bold border-b-2 border-white flex items-center gap-2"
-			: "hover:border-b-2 border-b-2 border-transparent hover:border-white font-semibold flex items-center gap-2 transition-all duration-500 text-gray-400 hover:text-white";
+			: "hover:border-b-2 border-b-2 border-transparent hover:border-white font-semibold flex items-center gap-2 transition-all duration-500 text-morgul-secondary hover:text-white";
 
 	// navbar links
 	const navigationItems = (
@@ -52,7 +52,7 @@ const Navbar = () => {
 	);
 
 	return (
-		<nav className="w-full bg-blue-900/80 text-white flex items-center justify-between gap-0 md:gap-4 mx-auto px-2 sm:px-6 py-3 md:px-12 h-16 fixed top-0 z-40 backdrop-blur-sm backdrop-filter">
+		<nav className="w-full bg-bg-primary/80 text-white flex items-center justify-between gap-0 md:gap-4 mx-auto px-2 sm:px-6 py-3 md:px-12 h-16 fixed top-0 z-40 backdrop-blur-sm backdrop-filter">
 			<div className="flex items-center justify-start gap-2">
 				<figure className="cursor-pointer inset-0">
 					<img
@@ -63,7 +63,7 @@ const Navbar = () => {
 					/>
 				</figure>
 				<NavLink
-					className="text-xl sm:text-2xl font-semibold text-blue-50 hover:text-blue-300 transition-all duration-500"
+					className="text-xl sm:text-2xl font-semibold hover:text-morgul-secondary transition-all duration-500"
 					to={"/"}
 				>
 					Minas Morgul
@@ -83,7 +83,7 @@ const Navbar = () => {
 				<ul
 					className={`w-3/5 sm:w-full flex flex-col sm:flex-row justify-start sm:justify-center gap-2 sm:gap-5 text-base sm:text-lg font-semibold transition-all duration-700 absolute sm:static sm:shadow-none pl-6 p-4 sm:p-0 ${
 						openSidebar
-							? "right-0 top-16 bg-blue-900/80 z-50 backdrop-blur-sm backdrop-filter"
+							? "right-0 top-16 bg-bg-primary/80 z-50 backdrop-blur-sm backdrop-filter"
 							: "-right-full top-16 shadow-none"
 					}`}
 				>
