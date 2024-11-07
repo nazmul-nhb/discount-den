@@ -17,6 +17,7 @@ const Offer = ({ offer }) => {
 			{/* Image */}
 			<figure className="w-full h-48 bg-gray-200 rounded-t-lg relative">
 				<img
+					loading="eager"
 					src={genericOfferImage}
 					alt={offer.title}
 					className="w-full h-full object-cover rounded-t-lg"
@@ -57,6 +58,7 @@ const Offer = ({ offer }) => {
 					{/* Image */}
 					<figure className="w-full h-56 rounded-md overflow-hidden">
 						<img
+							loading="eager"
 							src={genericOfferImage}
 							alt={offer.title}
 							className="w-full h-full object-cover"
