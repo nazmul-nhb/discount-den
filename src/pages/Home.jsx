@@ -1,7 +1,9 @@
+import Offers from "../components/Offers";
+
 const Home = () => {
 	return (
 		<section className="">
-			Hello from Home
+			<Offers />
 		</section>
 	);
 };
