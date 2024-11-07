@@ -13,9 +13,9 @@ const Offer = ({ offer }) => {
 	const handleCancel = () => setIsModalOpen(false);
 
 	return (
-		<div className="p-4 max-w-xs bg-morgul-primary/15 rounded-lg shadow-md shadow-morgul-primary hover:shadow-lg hover:shadow-morgul-primary transition-all duration-300">
+		<div className="p-4 w-full max-w-xs bg-morgul-primary/15 rounded-lg shadow-md shadow-morgul-primary hover:shadow-lg hover:shadow-morgul-primary transition-all duration-300 mx-auto">
 			{/* Image */}
-			<figure className="w-full h-48 bg-gray-200 rounded-t-lg relative">
+			<figure className="w-full h-48 rounded-t-lg relative">
 				<img
 					loading="eager"
 					src={genericOfferImage}
