@@ -32,7 +32,7 @@ const Offer = ({ offer }) => {
 					type="primary"
 					icon={<InfoCircleOutlined />}
 					onClick={showModal}
-					className="w-full"
+					className="w-full hover:-translate-y-1 focus:translate-y-1 active:translate-y-0 transition-all duration-300"
 				>
 					View Offer
 				</Button>

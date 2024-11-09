@@ -2,15 +2,19 @@ import { offers } from "../data/offers";
 import Offer from "./Offer";
 
 const Offers = () => {
-
-offers
-    return (
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full mx-auto">
-            {
-                offers.map(offer=> <Offer key={offer.id} offer={offer}/>)
-            }
-        </section>
-    );
+	offers;
+	return (
+		<section className="w-full mx-auto">
+			<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-morgul-primary animate-pulse text-center mb-8">
+				Enjoy Exciting New Offers!
+			</h3>
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-10">
+				{offers.map((offer) => (
+					<Offer key={offer.id} offer={offer} />
+				))}
+			</div>
+		</section>
+	);
 };
 
 export default Offers;
