@@ -11,7 +11,3 @@ html {
 body {
 	font-family: "Fira Sans Condensed", sans-serif;
 }
-
-.transition-rounded {
-    transition: border-radius 0.7s ease;
-}

@@ -53,10 +53,10 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={`w-[96%] bg-bg-primary/80 text-white flex items-center justify-between gap-1 md:gap-4 px-4 sm:px-6 py-3 md:px-12 h-16 fixed top-2 left-1/2 transform -translate-x-1/2 z-40 backdrop-blur-sm backdrop-filter transition-all duration-700 ${
+			className={`bg-bg-primary/80 text-white flex items-center justify-between gap-1 md:gap-4 px-4 sm:px-6 py-3 md:px-8 h-16 fixed top-2 left-1/2 transform -translate-x-1/2 z-40 backdrop-blur-sm backdrop-filter transition-all duration-700 ${
 				openSidebar
-					? "rounded-none"
-					: "rounded-full shadow-md shadow-bg-primary"
+					? "w-full rounded-none"
+					: "w-[96%] rounded-full shadow-md shadow-bg-primary"
 			}`}
 		>
 			<div className="flex items-center justify-start gap-2">
