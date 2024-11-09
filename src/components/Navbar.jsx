@@ -52,7 +52,13 @@ const Navbar = () => {
 	);
 
 	return (
-		<nav className="w-full bg-bg-primary/80 text-white flex items-center justify-between gap-0 md:gap-4 mx-auto px-2 sm:px-6 py-3 md:px-12 h-16 fixed top-0 z-40 backdrop-blur-sm backdrop-filter">
+		<nav
+			className={`w-[96%] bg-bg-primary/80 text-white flex items-center justify-between gap-1 md:gap-4 px-4 sm:px-6 py-3 md:px-12 h-16 fixed top-2 left-1/2 transform -translate-x-1/2 z-40 backdrop-blur-sm backdrop-filter transition-all duration-700 ${
+				openSidebar
+					? "rounded-none"
+					: "rounded-full shadow-md shadow-bg-primary"
+			}`}
+		>
 			<div className="flex items-center justify-start gap-2">
 				<figure className="cursor-pointer inset-0">
 					<img
@@ -83,7 +89,7 @@ const Navbar = () => {
 				<ul
 					className={`w-3/5 sm:w-full flex flex-col sm:flex-row justify-start sm:justify-center gap-2 sm:gap-5 text-base sm:text-lg font-semibold transition-all duration-700 absolute sm:static sm:shadow-none pl-6 p-4 sm:p-0 ${
 						openSidebar
-							? "right-0 top-16 bg-bg-primary/80 z-50 backdrop-blur-sm backdrop-filter"
+							? "right-0 top-16 bg-bg-primary/80"
 							: "-right-full top-16 shadow-none"
 					}`}
 				>

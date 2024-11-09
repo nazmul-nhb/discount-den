@@ -39,7 +39,6 @@ const Offer = ({ offer }) => {
 			</div>
 
 			{/* Modal with offer details */}
-
 			<Modal
 				title={<span className="text-white">{offer.title}</span>}
 				open={isModalOpen}
