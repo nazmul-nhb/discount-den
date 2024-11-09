@@ -3,8 +3,8 @@ import genericOfferImage from "../assets/offer.png";
 
 const Cube = () => {
 	return (
-		<div className="stage-cube-content">
-			<div className="cubeSpinner">
+		<div className="stage-cube-content cursor-pointer hover:scale-105 transition-all duration-500">
+			<div className={`cubeSpinner`}>
 				<div className="offer1">
 					<img
 						className="aspect-square p-6"

@@ -1,21 +1,10 @@
 // Variables for sizes and color
-$max-width: 640px;
-$cube-size: 320px;
-$cube-half: $cube-size / 2;
+$max-width: 340px;
+$cube-size: 300px;
+$cube-half: 150px;
 $border-color: #ccc;
 $bg-opacity: rgba(255, 255, 255, 0.8);
 $box-shadow-color: lightyellow;
-
-// Mixin for cube face transformations
-@mixin cubeFace(
-	$rotate-x: 0,
-	$rotate-y: 0,
-	$rotate-z: 0,
-	$translate-z: $cube-half
-) {
-	transform: rotateX($rotate-x) rotateY($rotate-y) rotateZ($rotate-z)
-		translateZ($translate-z);
-}
 
 // Base styles
 .stage-cube-content {
@@ -28,7 +17,7 @@ $box-shadow-color: lightyellow;
 
 .cubeSpinner {
 	position: relative;
-	animation: spinCube 12s infinite ease-in-out;
+	animation: spinCube 16s infinite ease-in-out;
 	transform-style: preserve-3d;
 	transform-origin: $cube-half $cube-half 0;
 	margin-left: calc(50% - #{$cube-half});
@@ -68,38 +57,38 @@ $box-shadow-color: lightyellow;
 }
 
 // Media query for responsive adjustments
-@media screen and (max-width: 768px) {
-	$cube-size: 160px;
-	$cube-half: $cube-size / 2;
+// @media screen and (max-width: 768px) {
+// 	$small-cube-size: 150px;
+// 	$small-cube-half: 75px;
 
-	.cubeSpinner div {
-		width: $cube-size;
-		height: $cube-size;
-		font-size: 50px;
-	}
+// 	.cubeSpinner div {
+// 		width: $small-cube-size;
+// 		height: $small-cube-size;
+// 		font-size: 50px;
+// 	}
 
-	// Responsive cube faces transformations
-	.offer1 {
-		transform: translateZ($cube-half);
-	}
-	.offer2 {
-		transform: rotateX(90deg) translateZ($cube-half);
-	}
-	.offer3 {
-		transform: rotateY(90deg) rotateX(-90deg) translateZ($cube-half);
-	}
-	.offer4 {
-		transform: rotateY(180deg) rotateZ(90deg) translateZ($cube-half);
-	}
-	.offer5 {
-		transform: rotateY(-90deg) rotateZ(90deg) translateZ($cube-half);
-	}
-	.offer6 {
-		transform: rotateY(90deg) translateZ($cube-half);
-	}
-}
+// 	// Responsive cube faces transformations
+// 	.offer1 {
+// 		transform: translateZ($small-cube-half);
+// 	}
+// 	.offer2 {
+// 		transform: rotateX(90deg) translateZ($small-cube-half);
+// 	}
+// 	.offer3 {
+// 		transform: rotateY(90deg) rotateX(-90deg) translateZ($small-cube-half);
+// 	}
+// 	.offer4 {
+// 		transform: rotateY(180deg) rotateZ(90deg) translateZ($small-cube-half);
+// 	}
+// 	.offer5 {
+// 		transform: rotateY(-90deg) rotateZ(90deg) translateZ($small-cube-half);
+// 	}
+// 	.offer6 {
+// 		transform: rotateY(90deg) translateZ($small-cube-half);
+// 	}
+// }
 
-// Keyframes
+// SpinCube Animation
 @keyframes spinCube {
 	to {
 		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
