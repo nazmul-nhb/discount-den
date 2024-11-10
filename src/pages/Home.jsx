@@ -4,7 +4,9 @@ import Offers from "../components/Offers";
 const Home = () => {
 	return (
 		<section className="flex flex-col items-center">
-			<Cube />
+			<div className="w-full">
+				<Cube />
+			</div>
 			<Offers />
 		</section>
 	);
