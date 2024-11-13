@@ -78,21 +78,13 @@ const Offer = ({ offer }) => {
 					</p>
 
 					{/* Offer Details */}
-					<div className="flex flex-col space-y-1 border-t border-gray-600 pt-4">
+					<div className="border-t border-gray-600 pt-4">
 						<div className="flex justify-between items-center">
 							<span className="font-medium text-gray-300">
 								Category:
 							</span>
 							<span className="text-gray-400">
 								{offer.category}
-							</span>
-						</div>
-						<div className="flex justify-between items-center">
-							<span className="font-medium text-gray-300">
-								Source:
-							</span>
-							<span className="text-gray-400">
-								{offer.source}
 							</span>
 						</div>
 					</div>

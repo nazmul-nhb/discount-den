@@ -123,10 +123,6 @@ const Footer = () => {
 								id="email"
 								name="email"
 								className="flex-grow mr-2"
-								style={{
-									backgroundColor: "white",
-									color: "black",
-								}}
 							/>
 							<Button
 								type="default"
