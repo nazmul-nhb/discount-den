@@ -30,14 +30,12 @@ const Features = () => {
 						key={index}
 						className="bg-bg-primary border text-morgul-secondary border-bg-secondary/20 p-6 rounded-lg shadow-md shadow-morgul-primary hover:scale-105 transition-all duration-500 flex items-center space-x-4"
 					>
-						<div className="text-3xl">
-							{feature.icon}
-						</div>
+						<div className="text-3xl">{feature.icon}</div>
 						<div>
 							<h3 className="text-lg font-semibold">
 								{feature.title}
 							</h3>
-							<p className="text-gray-200">
+							<p className="text-morgul-secondary/60">
 								{feature.description}
 							</p>
 						</div>

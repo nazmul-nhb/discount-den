@@ -6,12 +6,16 @@ import {
 	FaCcPaypal,
 	FaCcApplePay,
 } from "react-icons/fa";
+import bKash from "../assets/mfs/bkash.svg";
+import nagad from "../assets/mfs/nagad.svg";
+import upay from "../assets/mfs/upay.png";
+import rocket from "../assets/mfs/rocket.png";
 
 export const CardPaymentOptions = () => {
 	return (
 		<div className="lg:w-1/3 mt-8 mb-12">
 			<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-morgul-primary mb-8">
-				Cards We Accept!
+				Cards We Accept:
 			</h3>
 			<div className="w-full grid grid-cols-3 gap-8 text-7xl mx-auto">
 				<FaCcVisa
@@ -45,16 +49,16 @@ export const CardPaymentOptions = () => {
 
 export const BangladeshMFS = () => {
 	const mfsOptions = [
-		{ name: "bKash", logo: "src/assets/mfs/bkash.svg" },
-		{ name: "Nagad", logo: "src/assets/mfs/nagad.svg" },
-		{ name: "Upay", logo: "src/assets/mfs/upay.png" },
-		{ name: "Rocket", logo: "src/assets/mfs/rocket.png" },
+		{ name: "bKash", logo: bKash },
+		{ name: "Nagad", logo: nagad },
+		{ name: "Upay", logo: upay },
+		{ name: "Rocket", logo: rocket },
 	];
 
 	return (
 		<div className="lg:w-1/3 mt-8 mb-12">
 			<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-morgul-primary mb-8">
-				MFS Payments We Accept!
+				MFS Payments We Accept:
 			</h3>
 			<div className="w-full grid grid-cols-2 gap-8">
 				{mfsOptions.map((option) => (
