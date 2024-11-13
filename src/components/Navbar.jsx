@@ -5,14 +5,15 @@ import { FaHome } from "react-icons/fa";
 import { GiCompass } from "react-icons/gi";
 
 const Navbar = () => {
-	const [openSidebar, setOpenSidebar] = useState(false);
+	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
 	const sidebarRef = useRef(null);
 
 	// sidebar clicking in small devices
 	useEffect(() => {
 		const handleClickOutside = (e) => {
 			if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
-				setOpenSidebar(false);
+				setIsSidebarOpen(false);
 			}
 		};
 
@@ -22,6 +23,19 @@ const Navbar = () => {
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
 	}, [sidebarRef]);
+
+	// Detect scroll to toggle navbar style
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 0);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
 	// classes for navbar links
 	const navClasses = ({ isActive }) =>
@@ -33,7 +47,7 @@ const Navbar = () => {
 	const navigationItems = (
 		<>
 			<NavLink
-				onClick={() => setOpenSidebar(false)}
+				onClick={() => setIsSidebarOpen(false)}
 				className={navClasses}
 				to={"/"}
 			>
@@ -41,7 +55,7 @@ const Navbar = () => {
 				Home
 			</NavLink>
 			<NavLink
-				onClick={() => setOpenSidebar(false)}
+				onClick={() => setIsSidebarOpen(false)}
 				className={navClasses}
 				to={"/contact"}
 			>
@@ -54,7 +68,7 @@ const Navbar = () => {
 	return (
 		<nav
 			className={`bg-bg-primary/80 text-white flex items-center justify-between gap-1 md:gap-4 px-4 sm:px-6 py-3 md:px-8 h-16 fixed left-1/2 transform -translate-x-1/2 z-40 backdrop-blur-sm backdrop-filter transition-all duration-700 ${
-				openSidebar
+				isSidebarOpen || isScrolled
 					? "w-full top-0 rounded-none"
 					: "w-[96%] top-2 rounded-full shadow-md shadow-bg-primary"
 			}`}
@@ -82,13 +96,13 @@ const Navbar = () => {
 				<GiCompass
 					title="Navigate"
 					className={`sm:hidden text-4xl hover:text-blue-300 cursor-pointer z-50 transition-all duration-1000 ${
-						openSidebar && "rotate-[225deg] text-blue-400"
+						isSidebarOpen && "rotate-[225deg] text-blue-400"
 					}`}
-					onClick={() => setOpenSidebar(!openSidebar)}
+					onClick={() => setIsSidebarOpen(!isSidebarOpen)}
 				/>
 				<ul
 					className={`w-3/5 sm:w-full flex flex-col sm:flex-row justify-start sm:justify-center gap-2 sm:gap-5 text-base sm:text-lg font-semibold transition-all duration-700 absolute sm:static sm:shadow-none pl-6 p-4 sm:p-0 ${
-						openSidebar
+						isSidebarOpen
 							? "right-0 top-16 bg-bg-primary/80"
 							: "-right-full top-16 shadow-none"
 					}`}
