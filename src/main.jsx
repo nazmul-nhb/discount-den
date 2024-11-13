@@ -5,6 +5,7 @@ import { RouterProvider } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { router } from "./routes/Routes";
 import { ConfigProvider } from "antd";
+import ScrollButtons from "./components/ScrollButtons";
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")).render(
 				}}
 			>
 				<RouterProvider router={router} />
+				<ScrollButtons />
 			</ConfigProvider>
 		</HelmetProvider>
 	</StrictMode>

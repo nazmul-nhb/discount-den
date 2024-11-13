@@ -32,7 +32,7 @@ const TopBar = () => {
 
 	return (
 		<div
-			className={`bg-gray-800 text-white transition-all duration-300 h-10 ${
+			className={`bg-gray-800 text-white transition-all duration-500 h-10 ${
 				isVisible ? "top-0 hidden sm:block" : "-top-16"
 			} fixed w-full z-50`}
 		>

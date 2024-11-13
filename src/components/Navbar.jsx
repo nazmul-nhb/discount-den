@@ -78,7 +78,7 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={`bg-bg-primary/80 text-white flex items-center justify-between gap-1 md:gap-4 px-4 sm:px-6 py-3 md:px-8 h-16 fixed left-1/2 transform -translate-x-1/2 z-40 backdrop-blur-sm backdrop-filter transition-all duration-700 ${
+			className={`bg-bg-primary/80 text-white flex items-center justify-between gap-1 md:gap-4 px-4 sm:px-6 py-3 md:px-8 h-16 fixed left-1/2 transform -translate-x-1/2 z-40 backdrop-blur-sm backdrop-filter transition-all duration-500 ${
 				isSidebarOpen || !isNavbarVisible
 					? "w-full top-0 rounded-none"
 					: navbarAtTop
