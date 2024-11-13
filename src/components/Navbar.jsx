@@ -6,10 +6,13 @@ import { GiCompass } from "react-icons/gi";
 
 const Navbar = () => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-	const [isScrolled, setIsScrolled] = useState(false);
+	const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+	const [lastScrollY, setLastScrollY] = useState(0);
+	const [navbarAtTop, setNavbarAtTop] = useState(true);
+
 	const sidebarRef = useRef(null);
 
-	// sidebar clicking in small devices
+	// Close sidebar when clicking outside
 	useEffect(() => {
 		const handleClickOutside = (e) => {
 			if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
@@ -24,10 +27,18 @@ const Navbar = () => {
 		};
 	}, [sidebarRef]);
 
-	// Detect scroll to toggle navbar style
+	// Handle scroll behavior for navbar and topbar
 	useEffect(() => {
 		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 0);
+			const scrollY = window.scrollY;
+			setNavbarAtTop(scrollY === 0);
+
+			if (scrollY > lastScrollY) {
+				setIsNavbarVisible(false);
+			} else {
+				setIsNavbarVisible(true);
+			}
+			setLastScrollY(scrollY);
 		};
 
 		window.addEventListener("scroll", handleScroll);
@@ -35,15 +46,15 @@ const Navbar = () => {
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
-	}, []);
+	}, [lastScrollY]);
 
-	// classes for navbar links
+	// Classes for navbar links
 	const navClasses = ({ isActive }) =>
 		isActive
 			? "font-bold border-b-2 border-white flex items-center gap-2"
 			: "hover:border-b-2 border-b-2 border-transparent hover:border-white font-semibold flex items-center gap-2 transition-all duration-500 text-morgul-secondary hover:text-white";
 
-	// navbar links
+	// Navbar links
 	const navigationItems = (
 		<>
 			<NavLink
@@ -68,9 +79,11 @@ const Navbar = () => {
 	return (
 		<nav
 			className={`bg-bg-primary/80 text-white flex items-center justify-between gap-1 md:gap-4 px-4 sm:px-6 py-3 md:px-8 h-16 fixed left-1/2 transform -translate-x-1/2 z-40 backdrop-blur-sm backdrop-filter transition-all duration-700 ${
-				isSidebarOpen || isScrolled
+				isSidebarOpen || !isNavbarVisible
 					? "w-full top-0 rounded-none"
-					: "w-[96%] top-2 rounded-full shadow-md shadow-bg-primary"
+					: navbarAtTop
+					? "w-[96%] sm:w-full top-2 sm:top-10 rounded-full sm:rounded-none shadow-md shadow-bg-primary"
+					: "w-full top-0 sm:top-10"
 			}`}
 		>
 			<div className="flex items-center justify-start gap-2">

@@ -11,6 +11,8 @@ const Footer = () => {
 	const [email, setEmail] = useState("");
 	const [messageApi, contextHolder] = message.useMessage();
 
+	const currentYear = new Date().getFullYear();
+
 	const handleSubscription = () => {
 		if (email) {
 			messageApi.success("Subscribed successfully!");
@@ -127,9 +129,9 @@ const Footer = () => {
 								}}
 							/>
 							<Button
-								type="primary"
+								type="default"
 								onClick={handleSubscription}
-								className="bg-blue-500 hover:bg-blue-600"
+								className="font-semibold text-morgul-primary"
 							>
 								Subscribe
 							</Button>
@@ -141,8 +143,8 @@ const Footer = () => {
 				<div className="mt-12 pt-8 border-t border-gray-700">
 					<div className="flex flex-col md:flex-row justify-between items-center">
 						<p>
-							&copy; {new Date().getFullYear()} Minus Morgul. All
-							rights reserved.
+							&copy; {currentYear} Minus Morgul. All rights
+							reserved.
 						</p>
 						<div className="mt-4 md:mt-0">
 							<a href="#" className="mr-4 hover:text-gray-300">

@@ -5,7 +5,7 @@ import Offers from "../components/Offers";
 const Home = () => {
 	return (
 		<section className="flex flex-col items-center">
-			<div className="w-full">
+			<div className="w-full mt-12">
 				<Cube />
 			</div>
 			<Features />
