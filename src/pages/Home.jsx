@@ -1,4 +1,5 @@
 import Cube from "../components/Cube";
+import Features from "../components/Features";
 import Offers from "../components/Offers";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
 			<div className="w-full">
 				<Cube />
 			</div>
+			<Features />
 			<Offers />
 		</section>
 	);
