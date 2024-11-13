@@ -36,7 +36,10 @@ const Contact = () => {
 									},
 								]}
 							>
-								<Input />
+								<Input
+									size="large"
+									placeholder="Enter your name"
+								/>
 							</Form.Item>
 							<Form.Item
 								name="email"
@@ -49,7 +52,10 @@ const Contact = () => {
 									},
 								]}
 							>
-								<Input />
+								<Input
+									size="large"
+									placeholder="Enter your email"
+								/>
 							</Form.Item>
 							<Form.Item
 								name="subject"
@@ -61,7 +67,10 @@ const Contact = () => {
 									},
 								]}
 							>
-								<Input />
+								<Input
+									size="large"
+									placeholder="Enter a message subject"
+								/>
 							</Form.Item>
 							<Form.Item
 								name="message"
@@ -73,7 +82,11 @@ const Contact = () => {
 									},
 								]}
 							>
-								<TextArea rows={4} />
+								<TextArea
+									size="large"
+									placeholder="Write your message"
+									rows={4}
+								/>
 							</Form.Item>
 							<Form.Item>
 								<Button

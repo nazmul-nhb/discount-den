@@ -16,7 +16,7 @@ const Navbar = () => {
 
 	const handleSearch = (keyword) => {
 		if (!keyword.trim()) {
-			message.warning("Please search with a keyword!");
+			messageApi.warning("Please search with a keyword!");
 			return;
 		}
 

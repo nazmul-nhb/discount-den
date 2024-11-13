@@ -18,7 +18,9 @@ createRoot(document.getElementById("root")).render(
 							colorBgElevated: "#1f89b1",
 						},
 						Input: {
-							colorBgContainer: "#d4d9d5",
+							colorBgContainer: "transparent",
+							colorText: "white",
+							colorTextPlaceholder: "white",
 						},
 					},
 				}}
