@@ -3,12 +3,38 @@ import { useEffect, useRef, useState } from "react";
 import { MdContactMail } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { GiCompass } from "react-icons/gi";
+import { Input } from "antd";
+import { message } from "antd";
 
 const Navbar = () => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 	const [isNavbarVisible, setIsNavbarVisible] = useState(true);
 	const [lastScrollY, setLastScrollY] = useState(0);
 	const [navbarAtTop, setNavbarAtTop] = useState(true);
+
+	const [messageApi, contextHolder] = message.useMessage();
+
+	const handleSearch = (keyword) => {
+		if (!keyword.trim()) {
+			message.warning("Please search with a keyword!");
+			return;
+		}
+
+		messageApi.open({
+			key: "search",
+			type: "loading",
+			content: `Searching for "${keyword.trim()}"...`,
+		});
+
+		setTimeout(() => {
+			messageApi.open({
+				key: "search",
+				type: "success",
+				content: "Search Finished!",
+				duration: 2,
+			});
+		}, 1000);
+	};
 
 	const sidebarRef = useRef(null);
 
@@ -86,8 +112,14 @@ const Navbar = () => {
 					: "w-full top-0 sm:top-10"
 			}`}
 		>
-			<div className="flex items-center justify-start gap-2">
-				<figure className="cursor-pointer inset-0">
+			{contextHolder}
+			{/* Site Logo and Title */}
+			<NavLink
+				title="Minas Morgul"
+				className="flex items-center justify-start gap-2 text-xl sm:text-2xl font-semibold hover:text-morgul-secondary transition-all duration-500"
+				to={"/"}
+			>
+				<figure>
 					<img
 						className="w-9 sm:w-10 hover:animate-pulse"
 						src="/logo.png"
@@ -95,13 +127,23 @@ const Navbar = () => {
 						alt="Logo"
 					/>
 				</figure>
-				<NavLink
-					className="text-xl sm:text-2xl font-semibold hover:text-morgul-secondary transition-all duration-500"
-					to={"/"}
-				>
+				<h1 className="hidden sm:block transition-transform duration-500">
 					Minas Morgul
-				</NavLink>
+				</h1>
+			</NavLink>
+
+			{/* Search Bar */}
+			<div className="mx-4 sm:mx-6">
+				<Input.Search
+					placeholder="Search..."
+					allowClear
+					icon="Search"
+					size="large"
+					onSearch={handleSearch}
+				/>
 			</div>
+
+			{/* NavLinks */}
 			<div
 				ref={sidebarRef}
 				className="flex justify-between items-center text-sm xl:text-base"

@@ -33,7 +33,7 @@ const TopBar = () => {
 	return (
 		<div
 			className={`bg-gray-800 text-white transition-all duration-500 h-10 ${
-				isVisible ? "top-0 hidden sm:block" : "-top-16"
+				isVisible ? "top-0 hidden sm:block" : "-top-12"
 			} fixed w-full z-50`}
 		>
 			<div className="mx-auto px-4 sm:px-6 md:px-8 py-2">
@@ -49,7 +49,7 @@ const TopBar = () => {
 							</span>
 						</a>
 						<a
-							href="https://wa.me/01623732187"
+							href="https://wa.me/8801623732187"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="flex items-center hover:text-gray-300"
