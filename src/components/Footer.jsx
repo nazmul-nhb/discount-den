@@ -115,7 +115,7 @@ const Footer = () => {
 							Subscribe to our newsletter for exclusive offers and
 							updates.
 						</p>
-						<div className="flex">
+						<div className="flex md:items-center flex-col md:flex-row gap-2">
 							<Input
 								onChange={(e) => setEmail(e.target.value)}
 								value={email}
