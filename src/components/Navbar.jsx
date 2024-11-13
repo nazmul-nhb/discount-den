@@ -127,7 +127,7 @@ const Navbar = () => {
 						alt="Logo"
 					/>
 				</figure>
-				<h1 className="hidden sm:block transition-transform duration-500">
+				<h1 className="hidden md:block transition-transform duration-500">
 					Minas Morgul
 				</h1>
 			</NavLink>

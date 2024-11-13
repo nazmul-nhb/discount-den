@@ -20,12 +20,12 @@ const features = [
 
 const Features = () => {
 	return (
-		<section className="my-8">
-			<div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+		<section className="mt-8 mb-20">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
 				{features.map((feature, index) => (
 					<div
 						key={index}
-						className="bg-white/50 p-6 rounded-lg shadow-md shadow-morgul-primary hover:scale-105 transition-all duration-500 flex items-center space-x-4"
+						className="bg-bg-secondary/10 border border-bg-secondary/20 p-6 rounded-lg shadow-md shadow-morgul-primary hover:scale-105 transition-all duration-500 flex items-center space-x-4"
 					>
 						<div className="text-3xl text-morgul-primary">
 							{feature.icon}

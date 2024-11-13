@@ -2,10 +2,9 @@ import { offers } from "../data/offers";
 import Offer from "./Offer";
 
 const Offers = () => {
-	offers;
 	return (
-		<section className="w-full mx-auto">
-			<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-morgul-primary animate-pulse text-center mb-8">
+		<section className="w-full mx-auto mt-12">
+			<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-morgul-primary animate-pulse text-center mb-12">
 				Enjoy Exciting New Offers!
 			</h3>
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-10">
