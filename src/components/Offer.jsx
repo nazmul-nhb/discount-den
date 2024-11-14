@@ -1,16 +1,41 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
+import { useState, useRef } from "react";
 import { Button, Modal } from "antd";
 import { InfoCircleOutlined } from "@ant-design/icons";
+import Draggable from "react-draggable";
 import genericOfferImage from "../assets/offer.png";
 
 const Offer = ({ offer }) => {
 	// State to manage modal visibility
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
+	const [disabled, setDisabled] = useState(true);
+	const [bounds, setBounds] = useState({
+		left: 0,
+		top: 0,
+		bottom: 0,
+		right: 0,
+	});
+
 	// Handlers to open and close the modal
 	const showModal = () => setIsModalOpen(true);
 	const handleCancel = () => setIsModalOpen(false);
+
+	const draggleRef = useRef(null);
+
+	const onStart = (_event, uiData) => {
+		const { clientWidth, clientHeight } = window.document.documentElement;
+		const targetRect = draggleRef.current?.getBoundingClientRect();
+		if (!targetRect) {
+			return;
+		}
+		setBounds({
+			left: -targetRect.left + uiData.x,
+			right: clientWidth - (targetRect.right - uiData.x),
+			top: -targetRect.top + uiData.y,
+			bottom: clientHeight - (targetRect.bottom - uiData.y),
+		});
+	};
 
 	return (
 		<div className="p-4 w-full max-w-xs bg-morgul-primary/15 rounded-lg shadow-md shadow-morgul-primary hover:shadow-lg hover:shadow-morgul-primary transition-all duration-300 mx-auto">
@@ -40,15 +65,39 @@ const Offer = ({ offer }) => {
 
 			{/* Modal with offer details */}
 			<Modal
-				title={<span className="text-white">{offer.title}</span>}
+				title={
+					<div
+						className="text-white cursor-move w-full pb-3"
+						onMouseOver={() => {
+							if (disabled) {
+								setDisabled(false);
+							}
+						}}
+						onMouseOut={() => {
+							setDisabled(true);
+						}}
+					>
+						{offer.title}
+					</div>
+				}
 				open={isModalOpen}
 				onCancel={handleCancel}
+				modalRender={(modal) => (
+					<Draggable
+						disabled={disabled}
+						bounds={bounds}
+						nodeRef={draggleRef}
+						onStart={(event, uiData) => onStart(event, uiData)}
+					>
+						<div ref={draggleRef}>{modal}</div>
+					</Draggable>
+				)}
 				footer={null}
 				className="rounded-lg text-white"
 				styles={{
 					body: {
 						backgroundColor: "#124e65",
-						padding: "24px",
+						padding: "12px 24px",
 						borderRadius: "8px",
 					},
 				}}
