@@ -1,5 +1,5 @@
-# Minas Morgul
+# Discount Den
 
 - Simple Web App to display offers
 
-- [Live Link](https://minas-morgul.vercel.app)
+- [Live Link](https://discount-den.vercel.app)

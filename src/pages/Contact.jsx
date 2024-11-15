@@ -108,7 +108,7 @@ const Contact = () => {
 						<div className="space-y-4">
 							<p className="flex items-center">
 								<FaMapMarkerAlt className="mr-2" />
-								Minas Morgul, SS Road, Sirajganj
+								Discount Den, SS Road, Sirajganj
 							</p>
 							<p className="flex items-center">
 								<FaPhone className="mr-2" />

@@ -115,7 +115,7 @@ const Navbar = () => {
 			{contextHolder}
 			{/* Site Logo and Title */}
 			<NavLink
-				title="Minas Morgul"
+				title="Discount Den"
 				className="flex items-center justify-start gap-2 text-xl sm:text-2xl font-semibold hover:text-morgul-secondary transition-all duration-500"
 				to={"/"}
 			>
@@ -128,7 +128,7 @@ const Navbar = () => {
 					/>
 				</figure>
 				<h1 className="hidden md:block transition-transform duration-500">
-					Minas Morgul
+					Discount Den
 				</h1>
 			</NavLink>
 
