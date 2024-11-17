@@ -5,6 +5,7 @@ import { FaHome } from "react-icons/fa";
 import { GiCompass } from "react-icons/gi";
 import { Input } from "antd";
 import { message } from "antd";
+			import Facebook from "../components/Facebook";
 
 const Navbar = () => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -131,7 +132,6 @@ const Navbar = () => {
 					Discount Den
 				</h1>
 			</NavLink>
-
 			{/* Search Bar */}
 			<div className="mx-4 sm:mx-6">
 				<Input.Search
@@ -142,7 +142,6 @@ const Navbar = () => {
 					onSearch={handleSearch}
 				/>
 			</div>
-
 			{/* NavLinks */}
 			<div
 				ref={sidebarRef}
@@ -165,6 +164,7 @@ const Navbar = () => {
 					{navigationItems}
 				</ul>
 			</div>
+				<Facebook />
 		</nav>
 	);
 };

@@ -95,13 +95,13 @@ const Footer = () => {
 							<a href="#" className="hover:text-blue-500 transition-all duration-300 hover:scale-125">
 								<FaFacebookF size={24} />
 							</a>
-							<a href="#" className="hover:text-sky-600">
+							<a href="#" className="hover:text-sky-600 transition-all duration-300 hover:scale-125">
 								<FaTwitter size={24} />
 							</a>
-							<a href="#" className="hover:text-red-800">
+							<a href="#" className="hover:text-red-800 transition-all duration-300 hover:scale-125">
 								<FaInstagram size={24} />
 							</a>
-							<a href="#" className="hover:text-sky-500">
+							<a href="#" className="hover:text-sky-500 transition-all duration-300 hover:scale-125">
 								<FaLinkedinIn size={24} />
 							</a>
 						</div>

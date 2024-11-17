@@ -16,6 +16,15 @@ export default {
         wave: 'url("/src/assets/wave.svg")',
       },
     },
+    keyframes: {
+      growShrink: {
+        '0%, 100%': { transform: 'scale(0.9)' },
+        '50%': { transform: 'scale(1.05)' },
+      },
+    },
+    animation: {
+      growShrink: 'growShrink 3s ease-in-out infinite',
+    }
   },
   plugins: [],
 };

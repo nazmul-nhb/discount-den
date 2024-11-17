@@ -5,7 +5,7 @@ import { BangladeshMFS, CardPaymentOptions } from "../components/Payment";
 
 const Home = () => {
 	return (
-		<section className="">
+		<section className="relative">
 			<Features />
 			<div className="w-full flex flex-col lg:flex-row items-center lg:items-start justify-around mx-auto">
 				<CardPaymentOptions />
