@@ -22,6 +22,11 @@ createRoot(document.getElementById("root")).render(
 							colorText: "white",
 							colorTextPlaceholder: "white",
 						},
+						Collapse: {
+							colorBgContainer: "#1f89b1",
+							paddingContentHorizontal: 16,
+							paddingContentVertical: 10,
+						},
 					},
 				}}
 			>

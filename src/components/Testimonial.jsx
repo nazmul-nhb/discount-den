@@ -10,7 +10,7 @@ const Testimonial = ({ testimonial }) => {
 	return (
 		<div
 			style={{ backgroundColor: mainBgColor }}
-			className="shadow-lg rounded-lg p-6 mx-4 my-2 w-80 flex-shrink-0"
+			className="shadow-md rounded-lg p-6 mx-4 my-2 w-80 flex-shrink-0"
 		>
 			<div className="flex items-center mb-4">
 				<div

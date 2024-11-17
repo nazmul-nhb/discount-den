@@ -1,4 +1,5 @@
 import Cube from "../components/Cube";
+import FAQs from "../components/FAQs";
 import Features from "../components/Features";
 import HeroSection from "../components/HeroSection";
 import Offers from "../components/Offers";
@@ -17,6 +18,7 @@ const Home = () => {
 			</div>
 			<Offers />
 			<Testimonials />
+			<FAQs />
 		</section>
 	);
 };
