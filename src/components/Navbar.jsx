@@ -5,7 +5,8 @@ import { FaHome } from "react-icons/fa";
 import { GiCompass } from "react-icons/gi";
 import { Input } from "antd";
 import { message } from "antd";
-			import Facebook from "../components/Facebook";
+import facebook from "../assets/fb.gif";
+import Facebook from "../components/Facebook";
 
 const Navbar = () => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -132,6 +133,7 @@ const Navbar = () => {
 					Discount Den
 				</h1>
 			</NavLink>
+
 			{/* Search Bar */}
 			<div className="mx-4 sm:mx-6">
 				<Input.Search
@@ -147,6 +149,15 @@ const Navbar = () => {
 				ref={sidebarRef}
 				className="flex justify-between items-center text-sm xl:text-base"
 			>
+				<div className="cursor-pointer mr-2">
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						href="https://fb.com"
+					>
+						<img className="w-16" src={facebook} alt="Facebook" />
+					</a>
+				</div>
 				<GiCompass
 					title="Navigate"
 					className={`sm:hidden text-4xl hover:text-blue-300 cursor-pointer z-50 transition-all duration-1000 ${
@@ -164,7 +175,7 @@ const Navbar = () => {
 					{navigationItems}
 				</ul>
 			</div>
-				<Facebook />
+			<Facebook />
 		</nav>
 	);
 };
