@@ -23,9 +23,10 @@ const Footer = () => {
 	};
 
 	return (
-		<footer className="bg-morgul-primary text-white pt-12 pb-8 mt-16">
+		<footer className="max-md:bg-morgul-primary md:bg-wave bg-cover bg-bottom h-full text-white pt-8 pb-8 mt-16">
 			{contextHolder}
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			{/* Main Content */}
+			<div className="max-w-screen-2xl mx-auto md:pt-6 px-8 lg:px-12">
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 					{/* Company Information */}
 					<div>
@@ -91,16 +92,16 @@ const Footer = () => {
 							Connect With Us
 						</h3>
 						<div className="flex space-x-4">
-							<a href="#" className="hover:text-gray-300">
+							<a href="#" className="hover:text-blue-500 transition-all duration-300 hover:scale-125">
 								<FaFacebookF size={24} />
 							</a>
-							<a href="#" className="hover:text-gray-300">
+							<a href="#" className="hover:text-sky-600">
 								<FaTwitter size={24} />
 							</a>
-							<a href="#" className="hover:text-gray-300">
+							<a href="#" className="hover:text-red-800">
 								<FaInstagram size={24} />
 							</a>
-							<a href="#" className="hover:text-gray-300">
+							<a href="#" className="hover:text-sky-500">
 								<FaLinkedinIn size={24} />
 							</a>
 						</div>
