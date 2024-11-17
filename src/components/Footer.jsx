@@ -23,7 +23,7 @@ const Footer = () => {
 	};
 
 	return (
-		<footer className="max-md:bg-morgul-primary md:bg-wave bg-cover bg-bottom h-full text-white pt-8 pb-8 mt-16">
+		<footer className="max-md:bg-discount-primary md:bg-wave bg-cover bg-bottom h-full text-white pt-8 pb-8 mt-16">
 			{contextHolder}
 			{/* Main Content */}
 			<div className="max-w-screen-2xl mx-auto md:pt-6 px-8 lg:px-12">
@@ -140,7 +140,7 @@ const Footer = () => {
 							<Button
 								type="default"
 								onClick={handleSubscription}
-								className="font-semibold text-morgul-primary"
+								className="font-semibold text-discount-primary"
 							>
 								Subscribe
 							</Button>
@@ -152,7 +152,7 @@ const Footer = () => {
 				<div className="mt-12 pt-8 border-t border-gray-700">
 					<div className="flex flex-col md:flex-row justify-between items-center">
 						<p>
-							&copy; {currentYear} Minus Morgul. All rights
+							&copy; {currentYear} Discount Den. All rights
 							reserved.
 						</p>
 						<div className="mt-4 md:mt-0">

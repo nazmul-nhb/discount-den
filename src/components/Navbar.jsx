@@ -80,7 +80,7 @@ const Navbar = () => {
 	const navClasses = ({ isActive }) =>
 		isActive
 			? "font-bold border-b-2 border-white flex items-center gap-2"
-			: "hover:border-b-2 border-b-2 border-transparent hover:border-white font-semibold flex items-center gap-2 transition-all duration-500 text-morgul-secondary hover:text-white";
+			: "hover:border-b-2 border-b-2 border-transparent hover:border-white font-semibold flex items-center gap-2 transition-all duration-500 text-discount-secondary hover:text-white";
 
 	// Navbar links
 	const navigationItems = (
@@ -118,7 +118,7 @@ const Navbar = () => {
 			{/* Site Logo and Title */}
 			<NavLink
 				title="Discount Den"
-				className="flex items-center justify-start gap-2 text-xl sm:text-2xl font-semibold hover:text-morgul-secondary transition-all duration-500"
+				className="flex items-center justify-start gap-2 text-xl sm:text-2xl font-semibold hover:text-discount-secondary transition-all duration-500"
 				to={"/"}
 			>
 				<figure>
@@ -155,7 +155,12 @@ const Navbar = () => {
 						rel="noopener noreferrer"
 						href="https://fb.com"
 					>
-						<img className="w-16" src={facebook} alt="Facebook" />
+						<img
+							loading="eager"
+							className="w-16"
+							src={facebook}
+							alt="Facebook"
+						/>
 					</a>
 				</div>
 				<GiCompass
