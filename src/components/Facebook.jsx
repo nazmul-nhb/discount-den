@@ -20,7 +20,7 @@ const Facebook = () => {
 			}
 		>
 			<figure className="relative w-44">
-				<img className="w-full" src={facebook} alt="Facebook" />
+				<img className="w-full min-w-44 aspect-square" src={facebook} alt="Facebook" />
 				<figcaption className="text-center font-semibold text-xl cursor-pointer text-teal-100">
 					<a
 						target="_blank"

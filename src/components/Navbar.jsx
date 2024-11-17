@@ -6,7 +6,7 @@ import { GiCompass } from "react-icons/gi";
 import { Input } from "antd";
 import { message } from "antd";
 import facebook from "../assets/fb.gif";
-import Facebook from "../components/Facebook";
+// import Facebook from "../components/Facebook";
 
 const Navbar = () => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -175,7 +175,7 @@ const Navbar = () => {
 					{navigationItems}
 				</ul>
 			</div>
-			<Facebook />
+			{/* <Facebook /> */}
 		</nav>
 	);
 };
