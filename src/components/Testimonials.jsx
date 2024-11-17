@@ -5,7 +5,7 @@ import Testimonial from "./Testimonial";
 const Testimonials = () => {
 	return (
 		<section className="w-full mx-auto mt-16">
-			<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-morgul-primary text-center mb-12">
+			<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-discount-primary text-center mb-12">
 				What Our Savvy Shoppers Say
 			</h3>
 			<Marquee pauseOnHover={true} gradient={false} speed={40}>

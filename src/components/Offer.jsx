@@ -38,7 +38,7 @@ const Offer = ({ offer }) => {
 	};
 
 	return (
-		<div className="p-4 w-full max-w-xs bg-morgul-primary/15 rounded-lg shadow-md shadow-morgul-primary hover:shadow-lg hover:shadow-morgul-primary transition-all duration-300 mx-auto">
+		<div className="p-4 w-full max-w-xs bg-discount-primary/15 rounded-lg shadow-md shadow-discount-primary hover:shadow-lg hover:shadow-discount-primary transition-all duration-300 mx-auto">
 			{/* Image */}
 			<figure className="w-full h-48 rounded-t-lg relative">
 				<img
@@ -144,7 +144,7 @@ const Offer = ({ offer }) => {
 						type="primary"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="w-full font-semibold bg-yellow-500 text-gray-900 border-none shadow-md shadow-yellow-500 hover:shadow-morgul-secondary hover:-translate-y-1 focus:translate-y-1 focus:shadow-sm transition-all duration-300 active:translate-y-0"
+						className="w-full font-semibold bg-yellow-500 text-gray-900 border-none shadow-md shadow-yellow-500 hover:shadow-discount-secondary hover:-translate-y-1 focus:translate-y-1 focus:shadow-sm transition-all duration-300 active:translate-y-0"
 					>
 						Claim Offer
 					</Button>

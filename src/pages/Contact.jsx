@@ -21,7 +21,7 @@ const Contact = () => {
 			<div className="bg-bg-secondary/75 shadow-md rounded-lg overflow-hidden">
 				<div className="md:flex">
 					{/* Contact Form */}
-					<div className="md:w-1/2 p-6 text-morgul-primary">
+					<div className="md:w-1/2 p-6 text-discount-primary">
 						<h2 className="text-2xl font-semibold mb-6">
 							Send Us a Message
 						</h2>
@@ -92,7 +92,7 @@ const Contact = () => {
 								<Button
 									type="primary"
 									htmlType="submit"
-									className="bg-morgul-primary shadow-md shadow-morgul-primary transition-all duration-500"
+									className="bg-discount-primary shadow-md shadow-discount-primary transition-all duration-500"
 								>
 									Send Message
 								</Button>
@@ -116,7 +116,7 @@ const Contact = () => {
 							</p>
 							<p className="flex items-center">
 								<FaEnvelope className="mr-2" />
-								info@morgul.com
+								info@discount.com
 							</p>
 							<p className="flex items-center">
 								<FaClock className="mr-2" />

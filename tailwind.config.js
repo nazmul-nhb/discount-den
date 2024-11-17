@@ -9,8 +9,8 @@ export default {
       colors: {
         'bg-primary': '#124e65',
         'bg-secondary': '#1f89b1',
-        'morgul-primary': '#002631',
-        'morgul-secondary': '#d4d9d5',
+        'discount-primary': '#002631',
+        'discount-secondary': '#d4d9d5',
       },
       backgroundImage: {
         wave: 'url("/src/assets/wave.svg")',

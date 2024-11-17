@@ -15,8 +15,8 @@ const ScrollButtons = () => {
 	};
 
 	useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        
+		window.addEventListener("scroll", handleScroll);
+
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
@@ -43,7 +43,7 @@ const ScrollButtons = () => {
 			{showTopButton && (
 				<button
 					onClick={scrollToTop}
-					className={`cursor-pointer hover:text-morgul-secondary transition-all duration-500`}
+					className={`cursor-pointer hover:text-discount-secondary transition-all duration-500`}
 				>
 					<IoIosArrowDropup />
 				</button>
@@ -52,7 +52,7 @@ const ScrollButtons = () => {
 			{showBottomButton && (
 				<button
 					onClick={scrollToBottom}
-					className={`cursor-pointer hover:text-morgul-secondary transition-all duration-500`}
+					className={`cursor-pointer hover:text-discount-secondary transition-all duration-500`}
 				>
 					<IoIosArrowDropdown />
 				</button>

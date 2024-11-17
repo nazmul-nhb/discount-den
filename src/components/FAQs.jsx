@@ -11,7 +11,7 @@ const { Panel } = Collapse;
 export default function FAQs() {
 	return (
 		<section id="faqs" className="w-full mx-auto mt-12">
-			<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-morgul-primary text-center mb-12">
+			<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-discount-primary text-center mb-12">
 				Frequently Asked Questions
 			</h3>
 			<Collapse

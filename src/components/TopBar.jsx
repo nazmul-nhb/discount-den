@@ -69,12 +69,12 @@ const TopBar = () => {
 							<span className="hidden sm:inline">Facebook</span>
 						</a>
 						<a
-							href="mailto:info@example.com"
+							href="mailto:info@discount-den.com"
 							className="flex items-center hover:text-gray-300"
 						>
 							<FaEnvelope className="mr-2" />
 							<span className="hidden sm:inline">
-								info@morgul.com
+								info@discount-den.com
 							</span>
 						</a>
 					</div>
