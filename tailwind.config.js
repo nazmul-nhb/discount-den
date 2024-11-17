@@ -17,8 +17,8 @@ export default {
       },
       keyframes: {
         growShrink: {
-          '0%, 100%': { transform: 'scale(0.9)' },
-          '50%': { transform: 'scale(1.05)' },
+          '0%, 100%': { transform: 'scale(0.95)' },
+          '50%': { transform: 'scale(1.2)' },
         },
       },
       animation: {

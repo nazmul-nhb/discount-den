@@ -157,7 +157,7 @@ const Navbar = () => {
 					>
 						<img
 							loading="eager"
-							className="w-16"
+							className="w-14"
 							src={facebook}
 							alt="Facebook"
 						/>
