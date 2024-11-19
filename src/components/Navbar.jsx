@@ -35,7 +35,7 @@ const Navbar = () => {
 				content: "Search Finished!",
 				duration: 2,
 			});
-		}, 1000);
+		}, 2000);
 	};
 
 	const sidebarRef = useRef(null);
@@ -137,7 +137,7 @@ const Navbar = () => {
 			{/* Search Bar */}
 			<div className="mx-4 sm:mx-6">
 				<Input.Search
-					placeholder="Search..."
+					placeholder="Search Offers..."
 					allowClear
 					icon="Search"
 					size="large"

@@ -14,7 +14,7 @@ const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
 	const handleSubscription = () => {
-		if (email) {
+		if (email.trim()) {
 			messageApi.success("Subscribed successfully!");
 			setEmail("");
 		} else {
@@ -131,7 +131,7 @@ const Footer = () => {
 						<div className="flex md:items-center flex-col md:flex-row gap-2">
 							<Input
 								onChange={(e) => setEmail(e.target.value)}
-								value={email}
+								value={email.trim()}
 								placeholder="Enter your email"
 								id="email"
 								name="email"

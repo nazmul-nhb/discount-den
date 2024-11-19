@@ -18,7 +18,7 @@ export default function HeroSection() {
 								<span className="block xl:inline">
 									Welcome to
 								</span>{" "}
-								<span className="block text-teal-600 xl:inline">
+								<span className="block text-bg-secondary xl:inline">
 									Discount Den
 								</span>
 							</h1>
@@ -29,7 +29,7 @@ export default function HeroSection() {
 								<div className="rounded-md shadow">
 									<a
 										href="#offers"
-										className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 md:py-4 md:text-lg md:px-10"
+										className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-bg-secondary hover:bg-bg-primary md:py-4 md:text-lg md:px-10 transition-all duration-500"
 									>
 										<FaShoppingCart className="mr-2" />
 										Shop Now
@@ -38,7 +38,7 @@ export default function HeroSection() {
 								<div className="mt-3 sm:mt-0 sm:ml-3">
 									<a
 										href="#offers"
-										className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-teal-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+										className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-bg-primary hover:text-white bg-discount-secondary hover:bg-bg-primary md:py-4 md:text-lg md:px-10 transition-all duration-500"
 									>
 										<FaSearch className="mr-2" />
 										Explore
