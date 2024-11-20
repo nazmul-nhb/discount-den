@@ -13,12 +13,20 @@ const Testimonial = ({ testimonial }) => {
 			className="shadow-md rounded-lg p-6 mx-4 my-2 w-80 flex-shrink-0"
 		>
 			<div className="flex items-center mb-4">
-				<div
-					style={{ color: textColor, backgroundColor: bgColor }}
-					className="rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold"
-				>
-					{testimonial.name[0]}
-				</div>
+				{testimonial.image ? (
+					<img
+						src={testimonial.image}
+						alt={testimonial.name}
+						className="rounded-full w-12 h-12"
+					/>
+				) : (
+					<div
+						style={{ color: textColor, backgroundColor: bgColor }}
+						className="rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold"
+					>
+						{testimonial.name[0]}
+					</div>
+				)}
 				<div className="ml-4">
 					<h3 className="font-semibold text-lg">
 						{testimonial.name}

@@ -1,13 +1,13 @@
 export const offers = [
     {
         id: "A1B2C3",
-        title: "50% Off on All Electronics",
-        description: "Get 50% discount on all electronics items at our store. Limited time offer!",
+        title: "Free Delivery | Tk. 120 OFF",
+        description: "Get Free Delivery or Tk. 120 OFF on 399 Shopping. Limited time offer!",
         image: "https://example.com/images/electronics.jpg",
         expiryDate: "2024-11-30",
-        link: "https://facebook.com/electronics_offer",
-        discount: "50% OFF",
-        category: "Electronics",
+        link: "https://www.facebook.com/photo/?fbid=985411736945853&set=a.639569108196786",
+        discount: "Tk. 120 OFF",
+        category: "Trend-Tales",
         source: "Facebook"
     },
     {

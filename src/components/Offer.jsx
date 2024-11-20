@@ -43,7 +43,10 @@ const Offer = ({ offer }) => {
 			<figure className="w-full h-48 rounded-t-lg relative">
 				<img
 					loading="eager"
-					src={genericOfferImage}
+					src={
+						// offer.image ? offer.image :
+						genericOfferImage
+					}
 					alt={offer.title}
 					className="w-full h-full object-cover rounded-t-lg"
 				/>
