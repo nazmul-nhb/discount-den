@@ -14,11 +14,11 @@ export default function HeroSection() {
 				<div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
 					<div className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
 						<div className="sm:text-center lg:text-left">
-							<h1 className="text-4xl tracking-tight font-extrabold text-gray-100 sm:text-5xl md:text-6xl">
+							<h1 className="text-4xl tracking-tight space-x-3 font-extrabold text-gray-100 sm:text-5xl md:text-6xl">
 								<span className="block xl:inline">
 									Welcome to
-								</span>{" "}
-								<span className="block text-bg-secondary xl:inline">
+								</span>
+								<span className="block text-transparent bg-clip-text bg-gradient-to-tl from-bg-primary to-bg-secondary xl:inline">
 									Discount Den
 								</span>
 							</h1>
@@ -29,7 +29,7 @@ export default function HeroSection() {
 								<div className="rounded-md shadow">
 									<a
 										href="#offers"
-										className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-bg-secondary hover:bg-bg-primary md:py-4 md:text-lg md:px-10 transition-all duration-500"
+										className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-bg-primary hover:bg-bg-secondary md:py-4 md:text-lg md:px-10 transition-all duration-500"
 									>
 										<FaShoppingCart className="mr-2" />
 										Shop Now
