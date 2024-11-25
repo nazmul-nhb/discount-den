@@ -106,5 +106,68 @@ export const offers = [
         link: "https://www.facebook.com/Glossybd.official?mibextid=ZbWKwL",
         category: "Shoe Store",
         source: "Facebook"
-    }
+    },
+    {
+        id: "013",
+        title: "Look",
+        description: "100% Authentic Cosmetics & Skincare Products from USA, UK, Korean Wholesale Distributor Price",
+        image: "",
+        link: "https://www.facebook.com/lookbdshop?mibextid=ZbWKwL",
+        category: "Beauty & Cosmetics",
+        source: "Facebook"
+    },
+    {
+        id: "014",
+        title: "Perfecto",
+        description: "Perfecto is one of the most authentic platform in Bangladesh for providing beauty products.",
+        image: "",
+        link: "https://www.facebook.com/perfectobd1?mibextid=ZbWKwL",
+        category: "Beauty & Cosmetics",
+        source: "Facebook"
+    },
+    {
+        id: "015",
+        title: "SarteY",
+        description: "SarteY is an authentic platform for skincare and beauty-care products in BD✨✨",
+        image: "",
+        link: "https://www.facebook.com/sarteskinhubbd?mibextid=ZbWKwL",
+        category: "Beauty & Cosmetics",
+        source: "Facebook"
+    },
+    {
+        id: "016",
+        title: "LIRA Import",
+        description: "LIRA IMPORT Is No.1 Destination For World's Top Beauty Brands In Bangladesh. Since 2015, We Offer Authentic and Imported Beauty Products At Most Affordable Price. You Can Buy Products From Our Online Platforms And Showrooms. Come & Experience Us!",
+        image: "",
+        link: "https://www.facebook.com/lirabangladesh?mibextid=ZbWKwL",
+        category: "Beauty & Cosmetics",
+        source: "Facebook"
+    },
+    {
+        id: "017",
+        title: "Organikaon",
+        description: "Our main objective is to make organic, chemical free products available to all.",
+        image: "",
+        link: "https://www.facebook.com/organikaon1?mibextid=ZbWKwL",
+        category: "Beauty & Cosmetics",
+        source: "Facebook"
+    },
+    {
+        id: "018",
+        title: "Lavishta",
+        description: "Premium Beauty Store in Bangladesh which offers High-end beauty products from USA",
+        image: "",
+        link: "https://www.facebook.com/lavishtabd?mibextid=ZbWKwL",
+        category: "Beauty & Cosmetics",
+        source: "Facebook"
+    },
+    {
+        id: "019",
+        title: "Korean Shop Bangladesh",
+        description: "Korean Shop Bangladesh is all set to bring 100% authentic and the best of Korean Skincare products",
+        image: "",
+        link: "https://www.facebook.com/koreanshopsBangladesh?mibextid=ZbWKwL",
+        category: "Beauty & Cosmetics",
+        source: "Facebook"
+    },
 ];
