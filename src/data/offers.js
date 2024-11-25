@@ -11,7 +11,7 @@ export const offers = [
     {
         id: "002",
         title: "DESHIRONG",
-        description: "DESHIRONG � an online page is one of the fastest growing and trusted online platform to get fashionable ladies clothing and fashion accessories, our goal will be always give you unique collection in a reasonable price in BD",
+        description: "DESHIRONG ✨ an online page, is one of the fastest growing and trusted online platform to get fashionable ladies clothing and fashion accessories, our goal will be always give you unique collection in a reasonable price in BD",
         image: "",
         link: "https://www.facebook.com/DeshiRongOnline?mibextid=ZbWKwL",
         category: "Ladies Wares",

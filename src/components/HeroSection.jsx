@@ -4,7 +4,10 @@ import { useTypewriter } from "react-simple-typewriter";
 
 export default function HeroSection() {
 	const [offerText] = useTypewriter({
-		words: ["exclusive offers from our Facebook Page"],
+		words: [
+			"exclusive offers from Facebook pages.",
+			"brand new items everyday.",
+		],
 		loop: true,
 	});
 
