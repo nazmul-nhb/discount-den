@@ -1,5 +1,10 @@
 import "../assets/cube.scss";
-import genericOfferImage from "../assets/offer.png";
+import cyc from "../assets/offers/cyc.jpg";
+import kurtiistic from "../assets/offers/kurtiistic.jpg";
+import perfecto from "../assets/offers/perfecto.png";
+import lira from "../assets/offers/lira.jpg";
+import lavishta from "../assets/offers/lavishta.jpg";
+import hermizon from "../assets/offers/hermizon.jpg";
 
 const Cube = () => {
 	return (
@@ -7,21 +12,24 @@ const Cube = () => {
 			<div className={`cubeSpinner`}>
 				<div className="offer1">
 					<img
+						loading="eager"
 						className="aspect-square p-6"
-						src={genericOfferImage}
+						src={cyc}
 						alt="Offer"
 					/>
 				</div>
 				<div className="offer2">
 					<img
-						src={genericOfferImage}
+						loading="eager"
+						src={kurtiistic}
 						className="-rotate-90 aspect-square p-6"
 						alt="Offer"
 					/>
 				</div>
 				<div className="offer3">
 					<img
-						src={genericOfferImage}
+						loading="eager"
+						src={perfecto}
 						className="-rotate-180 aspect-square p-6"
 						alt="Offer"
 					/>
@@ -29,21 +37,24 @@ const Cube = () => {
 				<div className="offer4">
 					<img
 						className="aspect-square p-6"
-						src={genericOfferImage}
+						loading="eager"
+						src={lira}
 						alt="Offer"
 					/>
 				</div>
 				<div className="offer5">
 					<img
+						loading="eager"
 						className="aspect-square p-6"
-						src={genericOfferImage}
+						src={lavishta}
 						alt="Offer"
 					/>
 				</div>
 				<div className="offer6">
 					<img
+						loading="eager"
 						className="aspect-square p-6"
-						src={genericOfferImage}
+						src={hermizon}
 						alt="Offer"
 					/>
 				</div>

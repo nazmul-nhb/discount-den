@@ -38,14 +38,14 @@ const Offer = ({ offer }) => {
 	};
 
 	return (
-		<div className="p-4 w-full max-w-xs bg-discount-primary/15 rounded-lg shadow-md shadow-discount-primary hover:shadow-lg hover:shadow-discount-primary transition-all duration-300 mx-auto">
+		<div className="p-4 w-full max-w-xs bg-discount-primary/20 rounded-lg shadow-md shadow-discount-primary hover:shadow-lg hover:shadow-discount-primary transition-all duration-300 mx-auto">
 			{/* Image */}
 			<figure className="w-full h-48 rounded-t-lg relative">
 				<img
 					loading="eager"
-					src={offer.image ? offer.image : genericOfferImage}
+					src={offer.image || genericOfferImage}
 					alt={offer.title}
-					className="w-full h-full object-cover rounded-t-lg"
+					className="w-full h-full rounded-t-lg"
 				/>
 				<figcaption className="text-white absolute bottom-2 font-semibold text-2xl w-full text-center">
 					{offer.title}
@@ -107,9 +107,9 @@ const Offer = ({ offer }) => {
 					<figure className="w-full h-56 rounded-md overflow-hidden">
 						<img
 							loading="eager"
-							src={genericOfferImage}
+							src={offer.image || genericOfferImage}
 							alt={offer.title}
-							className="w-full h-full object-cover"
+							className="w-full h-full"
 						/>
 					</figure>
 
