@@ -43,10 +43,7 @@ const Offer = ({ offer }) => {
 			<figure className="w-full h-48 rounded-t-lg relative">
 				<img
 					loading="eager"
-					src={
-						// offer.image ? offer.image :
-						genericOfferImage
-					}
+					src={offer.image ? offer.image : genericOfferImage}
 					alt={offer.title}
 					className="w-full h-full object-cover rounded-t-lg"
 				/>
@@ -116,30 +113,15 @@ const Offer = ({ offer }) => {
 						/>
 					</figure>
 
-					{/* Discount and Expiry Date */}
-					<div className="flex items-center justify-between">
-						<p className="text-xl font-semibold text-yellow-400">
-							{offer.discount}
-						</p>
-						<span className="text-sm text-gray-300">
-							Expires: {offer.expiryDate}
-						</span>
-					</div>
+					{/* Category*/}
+					<h3 className="text-xl font-semibold text-yellow-400">
+						{offer.category}
+					</h3>
+
+					{/* Description */}
 					<p className="text-gray-200 leading-relaxed">
 						{offer.description}
 					</p>
-
-					{/* Offer Details */}
-					<div className="border-t border-gray-600 pt-4">
-						<div className="flex justify-between items-center">
-							<span className="font-medium text-gray-300">
-								Category:
-							</span>
-							<span className="text-gray-400">
-								{offer.category}
-							</span>
-						</div>
-					</div>
 
 					{/* External Link Button */}
 					<Button
